@@ -3,7 +3,11 @@ Todos = new Meteor.Collection('todos');
 if (Meteor.isClient) {
   Template.TodosPanel.helpers({
     items: function() {
-      return Todos.find();
+      return Todos.find({}, {
+        sort: {
+          created_at: -1
+        }
+      });
     }
   });
 
