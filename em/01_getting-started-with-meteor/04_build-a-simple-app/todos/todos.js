@@ -26,6 +26,20 @@ if (Meteor.isClient) {
       });
     }
   });
+
+  Template.CreateTodoItem.events({
+    'submit form': function(e, tmpl) {
+      e.preventDefault();
+      var subject = tmpl.find('input').value;
+      Todos.insert({
+        subject: subject,
+        created_at: new Date,
+        is_done: false
+      });
+      var form = tmpl.find('form');
+      form.reset();
+    }
+  });
 }
 
 if (Meteor.isServer) {

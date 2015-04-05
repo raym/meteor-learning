@@ -10,6 +10,7 @@
 
 <template name="TodosPanel">
   <div class="todos-panel">
+    {{> CreateTodoItem}}
     <ul class="todos-list">
       {{#each items}}
         <li class="todo-item">
@@ -27,4 +28,10 @@
   <div class="subject">
     {{subject}}
   </div>
+</template>
+
+<template name="CreateTodoItem">
+  <form class="create-todo">
+    <input type="text" placeholder="Create new todo...">
+  </form>
 </template>
