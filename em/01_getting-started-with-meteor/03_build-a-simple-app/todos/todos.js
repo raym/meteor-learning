@@ -1,3 +1,5 @@
+Todos = new Meteor.Collection('todos');
+
 if (Meteor.isClient) {
 }
 
