@@ -14,6 +14,9 @@ if (Meteor.isClient) {
   Template.TodoItem.helpers({
     isDoneChecked: function() {
       return this.is_done ? 'checked' : '';
+    },
+    isDoneClass: function() {
+      return this.is_done ? 'done' : '';
     }
   });
 

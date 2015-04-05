@@ -13,7 +13,7 @@
     {{> CreateTodoItem}}
     <ul class="todos-list">
       {{#each items}}
-        <li class="todo-item">
+        <li class="todo-item {{isDoneClass}}">
           {{> TodoItem}}
         </li>
       {{/each}}
