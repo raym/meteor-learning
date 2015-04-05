@@ -47,6 +47,15 @@ if (Meteor.isClient) {
       form.reset();
     }
   });
+
+  Template.TodosCount.helpers({
+    completedCount: function() {
+      return Todos.find({is_done: true}).count();
+    },
+    totalCount: function() {
+      return Todos.find({}).count();
+    }
+  });
 }
 
 if (Meteor.isServer) {
