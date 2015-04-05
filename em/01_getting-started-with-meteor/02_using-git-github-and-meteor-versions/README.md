@@ -1,6 +1,6 @@
 http://git-scm.com/downloads
 
-```bash
+```sh
 ~ $ git --version
 ~ $ cd ~/src
 src $ git clone https://github.com/meteor/meteor.git
