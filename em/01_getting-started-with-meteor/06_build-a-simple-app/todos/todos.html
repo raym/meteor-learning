@@ -19,6 +19,10 @@
         <li class="todo-item {{isDoneClass}}">
           {{> TodoItem}}
         </li>
+      {{else}}
+        <li class="todo-item empty">
+          No todos yet.
+        </li>
       {{/each}}
     </ul>
     {{> TodosCount}}
