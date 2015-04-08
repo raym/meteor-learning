@@ -1,3 +1,4 @@
+dep = new Tracker.Dependency;
 HomeController = RouteController.extend({
   layoutTemplate: 'MasterLayout',
 
@@ -5,6 +6,8 @@ HomeController = RouteController.extend({
   },
 
   action: function() {
+    dep.depend();
+    console.log('action');
     this.render('Home');
   }
 });
