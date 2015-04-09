@@ -12,4 +12,5 @@ todos $ iron mongo
 show collections
 db.meteor_accounts_loginServiceConfiguration.find().pretty()
 db.users.find().pretty()
+// webdev tools: take a look at local storage to see what values are created and modifies when a user logs in/out
 ```
