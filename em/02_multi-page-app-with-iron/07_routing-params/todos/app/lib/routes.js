@@ -14,6 +14,6 @@ Router.route('/', {
 Router.route('/todos/:_id', {
   name: 'todos_detail',
   controller: 'TodosController',
-  action: 'details',
+  action: 'detail',
   whiere: 'client'
 });
