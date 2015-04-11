@@ -1,3 +1,9 @@
 <template name="CreateTodoItem">
-  <h1>Find me in app/client/templates/todos/create_todo_item/create_todo_item</h1>
+  <form class="create-todo">
+    {{#if currentUser}}
+      <input type="text" placeholder="Create a new todo...">
+    {{else}}
+      <input type="text" placeholder="Sign in to create todos..." readonly>
+    {{/if}}
+  </form>
 </template>
