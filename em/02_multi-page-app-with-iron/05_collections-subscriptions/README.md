@@ -18,3 +18,6 @@ Todos.find().fetch()
 ```sh
 todos $ iron g:publish todos
 ```
+```js
+Todos.find().fetch()
+```

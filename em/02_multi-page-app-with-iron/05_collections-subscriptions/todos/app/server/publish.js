@@ -6,5 +6,5 @@
 
 
 Meteor.publish('todos', function (/* args */) {
-  return Todos.find();
+  return Todos.find({userId: this.userId});
 });
