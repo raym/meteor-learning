@@ -9,7 +9,7 @@ Template.TodosList.events({
 /*****************************************************************************/
 Template.TodosList.helpers({
   todos: function() {
-    return Todos.find({userId: Meteor.userId()}, {
+    return Todos.find({}, {
       sort: { createdAt: -1 }
     });
   },
