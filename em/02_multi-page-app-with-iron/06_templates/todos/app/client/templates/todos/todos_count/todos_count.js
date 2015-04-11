@@ -8,6 +8,13 @@ Template.TodosCount.events({
 /* TodosCount: Helpers */
 /*****************************************************************************/
 Template.TodosCount.helpers({
+  completedCount: function() {
+    return Todos.find({isDone: true}).count();
+  },
+
+  totalCount: function() {
+    return Todos.find().count();
+  }
 });
 
 /*****************************************************************************/
