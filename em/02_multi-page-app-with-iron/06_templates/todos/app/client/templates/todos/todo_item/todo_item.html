@@ -1,3 +1,12 @@
 <template name="TodoItem">
-  <h1>Find me in app/client/templates/todos/todo_item/todo_item</h1>
+  <div class="done">
+    <input type="checkbox" name="isDone" {{isDoneChecked}}>
+  </div>
+
+  <div class="subject">
+    {{subject}}
+  </div>
+
+  <div class="action">
+  </div>
 </template>
