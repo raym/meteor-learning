@@ -8,3 +8,10 @@ todos $ iron g
 todos $ iron generator
 todos $ iron g:collection todos
 ```
+```js
+// webdev console
+Todos
+Todos.find().fetch()
+Todos.insert({userId: Meteor.userId(), createdAt: new Date, isDone: false, subject: 'First Todo'})
+Todos.find().fetch()
+```
