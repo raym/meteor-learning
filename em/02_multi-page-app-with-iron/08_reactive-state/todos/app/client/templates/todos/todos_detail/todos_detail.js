@@ -8,6 +8,9 @@ Template.TodosDetail.events({
 /* TodosDetail: Helpers */
 /*****************************************************************************/
 Template.TodosDetail.helpers({
+  isMyTodo: function() {
+    return this.userId === Meteor.userId();
+  }
 });
 
 /*****************************************************************************/
