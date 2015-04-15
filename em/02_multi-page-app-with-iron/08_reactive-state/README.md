@@ -1,2 +1,4 @@
-```sh
+```js
+// webdev console
+Todos.find().fetch()
 ```
