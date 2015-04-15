@@ -13,3 +13,11 @@ Meteor.publish('todos', function (/* args */) {
 Meteor.publish('todo', function (id) {
   return Todos.find({_id: id});
 });
+
+Meteor.publish('users', function (/* args */) {
+  return Users.find();
+});
+
+Meteor.publish('user', function (/* args */) {
+  return User.find();
+});
