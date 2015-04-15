@@ -10,7 +10,7 @@ Meteor.publish('todos', function (/* args */) {
 });
 
 Meteor.publish('todo', function (id) {
-  var todo = Todos.findOne({_id: id]);
+  var todo = Todos.findOne({_id: id});
   return [
     Todos.find({_id: id}),
     Meteor.users.find({_id: todo.userId}, {fields: {profile: 1}})
