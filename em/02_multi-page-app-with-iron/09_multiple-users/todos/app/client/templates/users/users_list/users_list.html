@@ -1,3 +1,13 @@
 <template name="UsersList">
-  <h1>Find me in app/client/templates/users/users_list/users_list</h1>
+  <h3>Users</h3>
+
+  <ul class="list">
+    {{#each users}}
+      <li>
+        {{#linkTo route='users.detail'}}
+          {{profile.name}}
+        {{/linkTo}}
+      </li>
+    {{/each}}
+  </ul>
 </template>

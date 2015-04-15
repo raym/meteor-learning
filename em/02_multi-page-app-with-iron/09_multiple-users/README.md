@@ -9,3 +9,7 @@ todos $ iron g:template users/users_detail
 todos $ iron g:publish users
 todos $ iron g:publish user
 ```
+```js
+//webdev console
+Meteor.users.find().fetch()
+```
