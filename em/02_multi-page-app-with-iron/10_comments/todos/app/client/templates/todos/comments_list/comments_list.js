@@ -5,8 +5,12 @@ Template.CommentsList.events({
   'submit form#new-comment': function(e, tmpl) {
     e.preventDefault();
 
-    var todo = this;
     var body = tmpl.find('textarea[name=body]').value;
+    if (_.isEmpty(body.trim())) {
+      return;
+    }
+
+    var todo = this;
     var form = tmpl.find('form');
 
     Comments.insert({
