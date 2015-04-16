@@ -4,29 +4,16 @@ Comments = new Mongo.Collection('comments');
 if (Meteor.isServer) {
   Comments.allow({
     insert: function (userId, doc) {
-      return false;
+      return !!userId;
     },
 
     update: function (userId, doc, fieldNames, modifier) {
-      return false;
+      return userId === doc.userId;
     },
 
     remove: function (userId, doc) {
-      return false;
+      return userId === doc.userId;
     }
   });
 
-  Comments.deny({
-    insert: function (userId, doc) {
-      return true;
-    },
-
-    update: function (userId, doc, fieldNames, modifier) {
-      return true;
-    },
-
-    remove: function (userId, doc) {
-      return true;
-    }
-  });
 }
