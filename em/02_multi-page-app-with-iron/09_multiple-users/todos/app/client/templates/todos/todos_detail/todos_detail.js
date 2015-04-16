@@ -33,7 +33,7 @@ Template.TodosDetail.helpers({
 
   user: function() {
     var todo = this;
-    return Meteor.users.find({_id: todo.userId});
+    return Meteor.users.findOne({_id: todo.userId});
   }
 });
 

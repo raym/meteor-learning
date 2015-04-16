@@ -5,8 +5,8 @@
         {{#linkTo route='users.detail' _id=user._id}}
           {{user.profile.name}}
         {{/linkTo}}
+        <span class="divider">/</span>
       </li>
-      <span class="divider">/</span>
     {{/unless}}
     <li class="active">{{subject}}</li>
   {{/contentFor}}
